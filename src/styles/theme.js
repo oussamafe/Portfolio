@@ -4,18 +4,18 @@ const hex2rgba = (hex, alpha = 1) => {
 };
 
 
-const WHITE = '#fff'
-
+const WHITE = '#F1FAEE'
+//const Yellow = '#FFBE55'
 
 const theme = {
     colors: {
-        yellow: '#FFBE55',
-        dark: '#151515',
-        grey: hex2rgba(WHITE, 0.07),
+        blue: '#1D3557',
+        grey: hex2rgba(WHITE, 0.7),
+        white : '#F1FAEE',
     },
     fonts: {
-        ProximaNova: 'Proxima Nova, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, monospace',
-        LondrinaOutline: 'Londrina Outline, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, monospace',
+        JosefinSans: 'Josefin Sans',
+        YesevaOne: 'Yeseva One',
     },
     fontSizes: {
         xs: '12px',

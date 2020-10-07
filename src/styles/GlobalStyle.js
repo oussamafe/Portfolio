@@ -11,9 +11,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${colors.dark};
-    font-family : ${fonts.ProximaNova};
-    color: ${colors.grey};
+    background-color: ${colors.blue};
+    font-family : ${fonts.JosefinSans};
+    color: ${colors.white};
+    margin : 0 !important;
   }
 `
 

@@ -9,15 +9,17 @@
 const path = require('path');
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-    // https://www.gatsbyjs.org/docs/debugging-html-builds/#fixing-third-party-modules
-    actions.setWebpackConfig({
-      resolve: {
-        alias: {
-          '@components': path.resolve(__dirname, 'src/components'),
-          '@pages': path.resolve(__dirname, 'src/pages'),
-          '@styles': path.resolve(__dirname, 'src/styles'),
-          '@fonts': path.resolve(__dirname, 'src/fonts'),
-        },
+  // https://www.gatsbyjs.org/docs/debugging-html-builds/#fixing-third-party-modules
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        '@components': path.resolve(__dirname, 'src/components'),
+        '@pages': path.resolve(__dirname, 'src/pages'),
+        '@styles': path.resolve(__dirname, 'src/styles'),
+        '@fonts': path.resolve(__dirname, 'src/fonts'),
+        '@images': path.resolve(__dirname, 'src/images'),
+        '@illustrations': path.resolve(__dirname, 'src/illustrations'),
       },
-    });
-  };
+    },
+  });
+};

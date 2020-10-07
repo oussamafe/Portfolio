@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { GlobalStyle } from '@styles'
-import { Loader, Head } from '@components'
+import { Loader, Head, StyledBackgroundSection, Projects } from '@components'
 
 
-const Text = styled.a`
-    color:white;
-    margin: 0 auto;
-`
 const StyledContent = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 `;
 
 
@@ -31,7 +28,8 @@ const Layout = () => {
             <GlobalStyle />
             {isLoading ? <Loader finishLoading={() => setIsLoading(false)} /> : (
                 <StyledContent>
-                    <Text>Finished Loading</Text>
+                    <StyledBackgroundSection />
+                    <Projects />
                 </StyledContent>
             )}
 
