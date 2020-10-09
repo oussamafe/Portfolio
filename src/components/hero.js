@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ButtonBackground } from '@components/icons'
-import { Facebook, Soundcloud, Github, Linkedin, Scroll } from '@components/icons/socials'
-import { media,theme } from '@styles'
-const { colors,fonts } = theme;
+import { Facebook, Mail, Github, Linkedin, Soundcloud, Scroll } from '@components/icons/socials'
+import { media, theme } from '@styles'
+const { colors, fonts } = theme;
 
 
 
@@ -77,6 +77,8 @@ const ButtonText = styled.a`
     grid-area: project-button;
     align-self: center;
     overflow: hidden;
+    color: ${colors.white};
+    text-decoration : none;
 `
 const Icons = styled.ul`
     display: flex;
@@ -91,9 +93,18 @@ const Icon = styled.li`
     fill: ${colors.grey};
     margin-right: 40px;
     list-style-type: none;
+    transition: transform .6s cubic-bezier(.215,.61,.355,1);
+    :hover {
+        transform: scale(1.5);
+    }
 `
 
 const Link = styled.a`
+    fill: ${colors.grey};
+    transition: fill .5s;
+    :hover {
+        fill: ${colors.white};
+    }
 `
 
 const ScrollDown = styled.div`
@@ -109,18 +120,32 @@ const ScrollDown = styled.div`
         fill: #f1faee;
         width: 40px;
         height: auto;
+        animation: bounce 2s infinite;
     }
+
+    @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
     
     ${media.tablet`display:none;`};
 `
 
-const ScrollDownText = styled.h6`
+const ScrollDownText = styled.a`
     font-family: ${fonts.JosefinSans};
     font-weight:300;
     color: ${colors.white};
     font-size: 1.2em;
     margin-top:0;
     margin-bottom:6px;
+    text-decoration:none;
 `
 
 
@@ -141,23 +166,36 @@ const Hero = () => {
             <Button>
                 <ButtonBackground />
             </Button>
-            <ButtonText>View Projects</ButtonText>
+            <ButtonText href="#projects">View Projects</ButtonText>
             <Icons>
                 <Icon>
-                    <Link><Github /></Link>
+                    <Link href="https://github.com/oussamafe" target="_blank" rel="nofollow noopener noreferrer" aria-label="github">
+                        <Github />
+                    </Link>
                 </Icon>
                 <Icon>
-                    <Link><Linkedin /></Link>
+                    <Link href="https://www.linkedin.com/in/oussama-fezzani/" target="_blank" rel="nofollow noopener noreferrer" aria-label="linked" >
+                        <Linkedin />
+                    </Link>
                 </Icon>
                 <Icon>
-                    <Link><Facebook /></Link>
+                    <Link href="mailto:oussama.fezzani@esprit.tn" aria-label="mail">
+                        <Mail />
+                    </Link>
                 </Icon>
                 <Icon>
-                    <Link><Soundcloud /></Link>
+                    <Link href="https://www.facebook.com/oussama.fezzani/" target="_blank" rel="nofollow noopener noreferrer" aria-label="facebook">
+                        <Facebook />
+                    </Link>
+                </Icon>
+                <Icon>
+                    <Link href="https://soundcloud.com/lauvabeats" target="_blank" rel="nofollow noopener noreferrer" aria-label="soundcloud">
+                        <Soundcloud />
+                    </Link>
                 </Icon>
             </Icons>
             <ScrollDown>
-                <ScrollDownText>My Projects</ScrollDownText>
+                <ScrollDownText href="#projects">My Projects</ScrollDownText>
                 <Scroll />
             </ScrollDown>
         </Header>

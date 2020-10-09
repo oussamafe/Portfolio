@@ -10,6 +10,7 @@ const Navbar = styled.nav`
     margin: 33px 5vw 0;
 `
 
+
 const Links = styled.div`
     display: flex;
     align-items: center;
@@ -31,6 +32,24 @@ const Item = styled.a`
     font-family: "Josefin Sans";
     font-weight: 700;
     margin-right: 77px;
+    position: relative;
+
+    ::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #f1faee;
+        transform-origin: bottom right;
+        transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    :hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
 `
 const Resume = styled.a`
     color: #f1faee;
@@ -58,13 +77,13 @@ const Nav = () => {
             <Links>
                 <Menu>
                     <Link>
-                        <Item>About</Item>
+                        <Item href="#about">About</Item>
                     </Link>
                     <Link>
-                        <Item>Projects</Item>
+                        <Item href="#projects">Projects</Item>
                     </Link>
                 </Menu>
-                <Resume>Resume</Resume>
+                <Resume href="/resume.pdf" target="_blank" rel="nofollow noopener noreferrer">Resume</Resume>
             </Links>
         </Navbar>
     )

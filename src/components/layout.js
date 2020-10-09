@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { GlobalStyle } from '@styles'
-import { Loader, Head, StyledBackgroundSection, Projects } from '@components'
+import { Loader, Head, StyledBackgroundSection, Projects, Footer } from '@components'
 
+
+if (typeof window !== 'undefined') {
+    // eslint-disable-next-line global-require
+    require('smooth-scroll')('a[href*="#"]');
+}
 
 const StyledContent = styled.div`
   display: flex;
@@ -27,10 +32,13 @@ const Layout = () => {
             <Head />
             <GlobalStyle />
             {isLoading ? <Loader finishLoading={() => setIsLoading(false)} /> : (
-                <StyledContent>
-                    <StyledBackgroundSection />
-                    <Projects />
-                </StyledContent>
+                <>
+                    <StyledContent>
+                        <StyledBackgroundSection id="about" />
+                        <Projects />
+                    </StyledContent>
+                    <Footer />
+                </>
             )}
 
         </div>

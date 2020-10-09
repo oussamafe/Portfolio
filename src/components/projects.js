@@ -61,7 +61,7 @@ const projectsData = [
 const Projects = () => {
 
     return (
-        <ProjectsSection>
+        <ProjectsSection id="projects">
             <Title>My Projects</Title>
             <CardSection>
                 {projectsData.map(data => {

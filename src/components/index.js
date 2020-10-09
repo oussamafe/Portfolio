@@ -6,3 +6,4 @@ export { default as StyledBackgroundSection } from './image';
 export { default as Hero } from './hero';
 export { default as Projects } from './projects';
 export { default as Card } from './card';
+export { default as Footer } from './footer';

@@ -2,8 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { ReactSVG } from 'react-svg'
 import { css } from 'glamor'
-import { media } from '@styles'
+import { media, theme } from '@styles'
 
+const { colors } = theme;
 //import { Logo } from '@components/icons'
 //import { media } from '@styles'
 
@@ -14,6 +15,7 @@ const Project = styled.article`
     overflow: hidden;
     transition: transform .6s;
     background-color: #457B9D;
+    box-shadow: 0 10px 30px -10px ${colors.blue};
     ${media.tablet`
         width: 40vw;
         height: 50vh;
@@ -28,6 +30,9 @@ const Project = styled.article`
         background-color: #457B9D;
         margin-bottom : 0;
     `}
+    :hover {
+        transform : scale(1.05);
+    }
 `
 
 const Information = styled.div`
