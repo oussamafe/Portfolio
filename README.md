@@ -2,7 +2,6 @@
   Portfolio
 </h1>
 
-
 ## 🚀 Introduction
 
 Hello i'm Oussama Fezzani , a software engineer from Tunisia
@@ -15,6 +14,6 @@ My first attempt at creating my own personnal portfolio from scratch using Gatsb
 
 [x] Project Setup
 
-[x] Loader Component 
+[x] Loader Component
 
-[ ] 
+[ ] Add Animations and scroll-reveal feature
