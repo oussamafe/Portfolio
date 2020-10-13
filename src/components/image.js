@@ -33,7 +33,7 @@ const MultiBackground = ({ className }) => {
   // positions! The lowermost image comes last!
   const backgroundFluidImageStack = [
     astronaut.childImageSharp.fluid,
-    `linear-gradient(  0deg, rgba(29, 53, 87, 0.2) 0%, rgba(29, 53, 87, 0.5) 100% )`
+    `linear-gradient(  0deg, rgba(29, 53, 87, 0.1) 0%, rgba(29, 53, 87, 0.2) 100% )`
   ].reverse()
 
   return (
@@ -57,7 +57,6 @@ const StyledMultiBackground = styled(MultiBackground)`
   width: 100vw;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: 50% 28%;
   background-size: cover;
 `
 

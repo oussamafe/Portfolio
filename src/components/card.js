@@ -4,9 +4,7 @@ import { ReactSVG } from 'react-svg'
 import { css } from 'glamor'
 import { media, theme } from '@styles'
 
-const { colors } = theme;
-//import { Logo } from '@components/icons'
-//import { media } from '@styles'
+const { colors, fonts } = theme;
 
 const Project = styled.article`
     width: 20vw;
@@ -14,7 +12,7 @@ const Project = styled.article`
     border-radius: 5vh;
     overflow: hidden;
     transition: transform .6s;
-    background-color: #457B9D;
+    background-color: ${colors.lightBlue};
     box-shadow: 0 10px 30px -10px ${colors.blue};
     ${media.tablet`
         width: 40vw;
@@ -27,7 +25,7 @@ const Project = styled.article`
         border-radius: 5vh;
         overflow: hidden;
         transition: transform .6s;
-        background-color: #457B9D;
+        background-color: ${colors.lightBlue};
         margin-bottom : 0;
     `}
     :hover {
@@ -38,7 +36,7 @@ const Project = styled.article`
 const Information = styled.div`
     width: 100%;
     height: 80%;
-    background-color: #457B9D;
+    background-color: ${colors.lightBlue};
     display: grid;
     grid-template-rows: repeat(3, auto);
     text-align: center;
@@ -48,7 +46,7 @@ const Information = styled.div`
 const Footer = styled.div`
     width: 100%;
     height: 20%;
-    background-color: #1D3557;
+    background-color: ${colors.darkBlue};
     display: grid;
     grid-template-rows: repeat(2, auto);
     text-align: center;
@@ -57,25 +55,26 @@ const Footer = styled.div`
 `
 
 const Title = styled.h4`
-    color: #F1FAEE;
-    font-family: 'Yeseva One';
+    color: ${colors.white};
+    font-family: ${fonts.YesevaOne};
     font-size: 40px;
     margin: 0;
 `
 
 const Description = styled.p`
     padding: 0 40px 0;
-    font-family: 'Josefin Sans Light';
+    font-family: ${fonts.JosefinSans};
+    font-weight : 300;
     font-size: 1em;
-    color: #F1FAEE;
+    color: ${colors.white};
     margin: 0;
     align-self : start;
 `
 
 const FooterTitle = styled.h3`
     margin: 0;
-    color: #F1FAEE;
-    font-family: 'Josefin Sans';
+    color: ${colors.white};
+    font-family: ${fonts.JosefinSans};
     font-weight: 200;
     font-size: 20px;
     align-self : center;
@@ -107,7 +106,7 @@ const styles = css({
 
 const IconStyles = css({
     ' svg path ': {
-        fill: '#F1FAEE'
+        fill: `${colors.white}`
     }
 })
 

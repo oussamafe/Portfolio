@@ -11,7 +11,9 @@ const theme = {
     colors: {
         blue: '#1D3557',
         grey: hex2rgba(WHITE, 0.7),
-        white : '#F1FAEE',
+        white: '#F1FAEE',
+        lightBlue: '#457B9D',
+        darkBlue: '#1D3557'
     },
     fonts: {
         JosefinSans: 'Josefin Sans',
